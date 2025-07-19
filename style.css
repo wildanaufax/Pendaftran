@@ -1,0 +1,37 @@
+@media (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px;
+  }
+
+  td {
+    position: relative;
+    padding-left: 50%;
+    text-align: left;
+  }
+
+  td::before {
+    position: absolute;
+    left: 10px;
+    width: 45%;
+    padding-right: 10px;
+    font-weight: bold;
+    color: #555;
+  }
+
+  td:nth-of-type(1)::before { content: "No"; }
+  td:nth-of-type(2)::before { content: "Nama"; }
+  td:nth-of-type(3)::before { content: "Alamat"; }
+  td:nth-of-type(4)::before { content: "Jenis Kelamin"; }
+  td:nth-of-type(5)::before { content: "Aksi"; }
+}
